@@ -34,6 +34,14 @@ public class Robot extends TimedRobot {
   @Override
   public void robotPeriodic() {
     CommandScheduler.getInstance().run();
+    SmartDashboard.putNumber("PDP Voltage: ", robotContainer.PDP.getVoltage());
+    SmartDashboard.putNumber("PDP Total Current: ", robotContainer.PDP.getTotalCurrent());
+    SmartDashboard.putNumber("PDP Ch 0 Current: ", robotContainer.PDP.getCurrent(0));
+    SmartDashboard.putNumber("PDP Ch 1 Current: ", robotContainer.PDP.getCurrent(1));
+    SmartDashboard.putNumber("PDP Ch 2 Current: ", robotContainer.PDP.getCurrent(2));
+    SmartDashboard.putNumber("PDP Ch 3 Current: ", robotContainer.PDP.getCurrent(3));
+    SmartDashboard.putNumber("PDP Ch 4 Current: ", robotContainer.PDP.getCurrent(4));
+    SmartDashboard.putNumber("PDP Ch 5 Current: ", robotContainer.PDP.getCurrent(5));
     
     switch(robotContainer.getDPad()){
       case 0:

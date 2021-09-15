@@ -8,6 +8,7 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
@@ -56,6 +57,7 @@ public class RobotContainer {
   private Command AutoDriveOnly;
 
   public Limelight limelight;
+  PowerDistributionPanel PDP = new PowerDistributionPanel(0);
 
   SendableChooser<Command> chooser = new SendableChooser<>();
 
