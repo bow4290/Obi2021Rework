@@ -42,6 +42,16 @@ public class Robot extends TimedRobot {
     SmartDashboard.putNumber("PDP Ch 3 Current: ", robotContainer.PDP.getCurrent(3));
     SmartDashboard.putNumber("PDP Ch 4 Current: ", robotContainer.PDP.getCurrent(4));
     SmartDashboard.putNumber("PDP Ch 5 Current: ", robotContainer.PDP.getCurrent(5));
+    SmartDashboard.putNumber("PDP Ch 6 Current: ", robotContainer.PDP.getCurrent(6));
+    SmartDashboard.putNumber("PDP Ch 7 Current: ", robotContainer.PDP.getCurrent(7));
+    SmartDashboard.putNumber("PDP Ch 8 Current: ", robotContainer.PDP.getCurrent(8));
+    SmartDashboard.putNumber("PDP Ch 9 Current: ", robotContainer.PDP.getCurrent(9));
+    SmartDashboard.putNumber("PDP Ch 10 Current: ", robotContainer.PDP.getCurrent(10));
+    SmartDashboard.putNumber("PDP Ch 11 Current: ", robotContainer.PDP.getCurrent(11));
+    SmartDashboard.putNumber("PDP Ch 12 Current: ", robotContainer.PDP.getCurrent(12));
+    SmartDashboard.putNumber("PDP Ch 13 Current: ", robotContainer.PDP.getCurrent(13));
+    SmartDashboard.putNumber("PDP Ch 14 Current: ", robotContainer.PDP.getCurrent(14));
+    SmartDashboard.putNumber("PDP Ch 15 Current: ", robotContainer.PDP.getCurrent(15));
     
     switch(robotContainer.getDPad()){
       case 0:
