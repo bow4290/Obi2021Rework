@@ -9,6 +9,8 @@ package frc.robot;
 
 public final class Constants {
 
+    public static final boolean demoMode = true;
+
     public static final class DriveConstants{
         public static final int leftVictorSPX1Channel = 12;
         public static final int leftVictorSPX2Channel = 11;
@@ -124,13 +126,13 @@ public final class Constants {
         public static final int shooterEncoderAverageSamples = 127;
         public static final int shooterMotorToRateSlope = 240000;
         public static final int shooterMotorToRateIntercept = 25000;
-        public static final double shooterSpeedDefault = 0.95;
-        public static final double shooterSpeedAuto = 0.95;
 
         public static final double minimumShooterDistance = 140.0;
         public static final double thresholdShooterDistance = 225.0;
         public static final double maximumShooterDistance = 335.0;
 
+        public static final double shooterSpeedDefault = 0.95;
+        public static final double shooterSpeedAuto = 0.95;
         public static final double shooterSpeedClose = 0.86;    // 0.95 old balls, 0.86 new balls
         public static final double shooterSpeedFar = 0.82;      // 0.85 old balls, 0.82 new balls
     }

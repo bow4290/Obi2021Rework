@@ -9,6 +9,7 @@ package frc.robot.commands.shooter;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.Constants;
 import frc.robot.Constants.ShooterConstants;
 import frc.robot.subsystems.ConveyorSubsystem;
 import frc.robot.subsystems.ShooterSubsystem;
@@ -18,6 +19,7 @@ public class ShootCommand extends CommandBase {
   private final ConveyorSubsystem conveyorSubsystem;
   private static double shooterRatekP = 0.3;
   private static double shooterRateSetPoint = 20000;
+  private static double targetShooterSpeed = 0;
 
   public ShootCommand(ShooterSubsystem shooterSubsystem, ConveyorSubsystem conveyorSubsystem) {
     this.shooterSubsystem = shooterSubsystem;
@@ -32,7 +34,11 @@ public class ShootCommand extends CommandBase {
 
   @Override
   public void execute() {
-    double targetShooterSpeed = shooterSubsystem.getTargetShooterSpeed();
+    if(Constants.demoMode){
+      targetShooterSpeed = ShooterConstants.shooterSpeedDefault;
+    } else{
+      targetShooterSpeed = shooterSubsystem.getTargetShooterSpeed(); 
+    }
     SmartDashboard.putNumber("Target Shooter Speed: ", targetShooterSpeed);
     double targetShooterRate = (ShooterConstants.shooterMotorToRateSlope * targetShooterSpeed) - ShooterConstants.shooterMotorToRateIntercept;                   // Roughly converts shooter motor speed (0 to 1) into encoder rate (0 to 215,000)
     shooterSubsystem.setTargetShooterRate(targetShooterRate);
